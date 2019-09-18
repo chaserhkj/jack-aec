@@ -24,7 +24,12 @@ int main(int argc, char** argv){
     if (!serverNameString.empty()) {
         serverName = serverNameString.c_str();
     }
-    jack_options_t options = JackNullOption;
+    //jack_options_t options = JackNullOption;
+
+    cout << clientName << endl;
+    if (serverName) {
+        cout << serverName << endl;
+    }
 
     return 0;
 }
