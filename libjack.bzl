@@ -1,5 +1,5 @@
 def _libjack(repo_ctx):
-    prefix = repo_ctx.os.environ.get("BAZEL_SYSTEM_PREFIX", "/usr/")
+    prefix = repo_ctx.os.environ.get("BAZEL_LIBJACK_PREFIX", "/usr/")
     prefix = repo_ctx.path(prefix)
 
     include_dir = prefix.get_child("include").get_child("jack")
@@ -30,5 +30,5 @@ cc_import(
 libjack = repository_rule(
         implementation = _libjack,
         local = True,
-        environ = ["BAZEL_SYSTEM_PREFIX"],
+        environ = ["BAZEL_LIBJACK_PREFIX"],
         )

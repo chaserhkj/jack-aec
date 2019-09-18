@@ -1,5 +1,5 @@
 def _libwebrtc_audio_processing(repo_ctx):
-    prefix = repo_ctx.os.environ.get("BAZEL_SYSTEM_PREFIX", "/usr/")
+    prefix = repo_ctx.os.environ.get("BAZEL_LIBWEBRTC_AUDIO_PROCESSING_PREFIX", "/usr/")
     prefix = repo_ctx.path(prefix)
 
     include_dir = prefix.get_child("include").get_child("webrtc_audio_processing")
@@ -30,5 +30,5 @@ cc_import(
 libwebrtc_audio_processing = repository_rule(
         implementation = _libwebrtc_audio_processing,
         local = True,
-        environ = ["BAZEL_SYSTEM_PREFIX"],
+        environ = ["BAZEL_LIBWEBRTC_AUDIO_PROCESSING_PREFIX"],
         )
