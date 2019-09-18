@@ -3,6 +3,7 @@ cc_binary(
         deps = [
                 "@absl//absl/flags:flag",
                 "@absl//absl/flags:parse",
+                "@absl//absl/flags:usage",
                 ],
         srcs = ["main.cc"]
         )

@@ -2,13 +2,15 @@
 
 #include "absl/flags/flag.h"
 #include "absl/flags/parse.h"
+#include "absl/flags/usage.h"
 
 using std::cout;
 using std::endl;
 
-ABSL_FLAG(bool, enabled, true, "Enable the flag");
+ABSL_FLAG(bool, enabled, false, "Enable the flag");
 
 int main(int argc, char** argv){
+    absl::SetProgramUsageMessage("A simple demo for absl/flags");
     absl::ParseCommandLine(argc, argv);
     bool enabled = absl::GetFlag(FLAGS_enabled);
     if (enabled){
