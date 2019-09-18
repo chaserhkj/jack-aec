@@ -4,6 +4,6 @@ local_repository(
         )
 
 local_repository(
-        name = "webrtc"
+        name = "webrtc",
         path = "lib/webrtc"
         )
