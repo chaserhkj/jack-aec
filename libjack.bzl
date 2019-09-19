@@ -22,7 +22,7 @@ def _libjack(repo_ctx):
     repo_ctx.file("BUILD", """
 cc_import(
         name = "libjack",
-        hdrs = glob(["jack/*.h"]),""" + library_directive + """
+        hdrs = glob(["jack/**"]),""" + library_directive + """
         visibility = ["//visibility:public"]
         )
                   """)

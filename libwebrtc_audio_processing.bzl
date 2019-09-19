@@ -22,7 +22,7 @@ def _libwebrtc_audio_processing(repo_ctx):
     repo_ctx.file("BUILD", """
 cc_import(
         name = "libwebrtc_audio_processing",
-        hdrs = glob(["webrtc_audio_processing/*.h"]),""" + library_directive + """
+        hdrs = glob(["webrtc_audio_processing/**"]),""" + library_directive + """
         visibility = ["//visibility:public"]
         )
                   """)
