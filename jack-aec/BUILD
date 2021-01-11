@@ -7,5 +7,6 @@ cc_binary(
                 "@absl//absl/flags:parse",
                 "@absl//absl/flags:usage",
                 ],
-        srcs = ["main.cc"]
+        srcs = ["main.cc"],
+        visibility = ["//visibility:public"]
         )
