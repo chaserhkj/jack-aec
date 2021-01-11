@@ -9,6 +9,14 @@ cc_binary(
                 "@absl//absl/flags:usage",
                 "@absl//absl/strings:str_format"
                 ],
-        srcs = ["main.cc"],
+        srcs = [
+                "main.cc",
+                "flags.cc",
+                "flags.h",
+                "ec_ctx.h",
+                "ec_ctx.cc",
+                "jack_mgr.h",
+                "jack_mgr.cc"
+                ],
         visibility = ["//visibility:public"]
         )
